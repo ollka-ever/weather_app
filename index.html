@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather forecast</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <form id="search-form">
+          <input type="text" id="city-search" placeholder="Please type your city" required />
+          <input type="submit" value="Search" id="search-button" />
+        </form> 
+        <button id="location-button">Current location</button>
+      </header>
+      <h1>Weather in <span id="city-header">Kyiv<span></h1>
+      <p id="current-date">Monday, 20 June 2022</p>
+      <div class="row main-section">
+        <div class="col-5 main-temperature">
+          <span id="current-temperature">+36</span><a href="#" id="celcius-converter">&#8451</a> | <a href="#" id="fahrenheit-converter">&#8457</a>
+          <br />
+          <div class="main-info">
+            <span id="weather-description">Rain</span><br />
+            Wind: <span id="wind">8</span> km/h<br />
+            Humidity: <span id="humidity">40</span>%
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="images/cloud.png" alt="Partly cloudy" class="main-icon" />
+        </div>
+      </div>
+
+      <hr />
+
+      <h2>Forecast for the next 5 days</h2>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tuesday</h5>
+              <img src="images/cloudy.png" alt="Cloudy" width="40%" />
+              <p class="card-text">+18&#8451;/+10&#8451;</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Wednesday</h5>
+              <img src="images/rainy.png" alt="Rainy" width="40%" />
+              <p class="card-text">+15&#8451;/+9&#8451;</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Thursday</h5>
+              <img src="images/storm.png" alt="Storm" width="40%" />
+              <p class="card-text">+11&#8451;/+5&#8451;</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Friday</h5>
+              <img src="images/sun.png" alt="Sunny" width="40%" />
+              <p class="card-text">+17&#8451;/+12&#8451;</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Saturday</h5>
+              <img src="images/windy.png" alt="Windy" width="40%" />
+              <p class="card-text">+16&#8451;/+11&#8451;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a
+        href="https://www.flaticon.com/free-icons/cloud"
+        title="cloud icons"
+        target="_blank"
+        >Cloud icons created by iconixar - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/free-icons/weather"
+        target="_blank"
+        title="weather icons"
+        >Weather icons created by iconixar - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/free-icons/sun"
+        title="sun icons"
+        target="_blank"
+        >Sun icons created by iconixar - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/free-icons/rain"
+        title="rain icons"
+        target="_blank"
+        >Rain icons created by iconixar - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/free-icons/cold"
+        title="cold icons"
+        target="_blank"
+        >Cold icons created by iconixar - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/free-icons/wind"
+        title="wind icons"
+        target="_blank"
+        >Wind icons created by iconixar - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/free-icons/rain"
+        title="rain icons"
+        target="_blank"
+        >Rain icons created by iconixar - Flaticon</a
+      >
+      <a href="https://www.vecteezy.com/free-vector/weather-icons"
+        >Weather Icons Vectors by Vecteezy</a
+      >
+    </footer>
+    <script src="src/index.js"></script>
+  </body>
+</html>

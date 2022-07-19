@@ -1,0 +1,87 @@
+header {
+  padding-top: 2%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3vw !important;
+}
+
+h2 {
+  text-align: center;
+  line-height: 1.5 !important;
+  margin-bottom: 20px !important;
+  font-size: 2vw !important;
+}
+
+footer {
+  background: #b7e9f7;
+  font-size: x-small;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
+.container {
+  margin-bottom: 40px;
+}
+
+.card:hover {
+  border: 3px solid #b7e9f7 !important;
+}
+
+#current-date {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.5vw;
+}
+
+.main-section {
+  padding-top: 2%;
+}
+
+.main-temperature {
+  font-size: 4vw;
+  text-align: right;
+}
+
+.main-icon {
+  width: 12vw;
+  display: block;
+  margin: 0 auto;
+}
+
+.main-info {
+  text-align: right;
+  font-size: 1.2vw;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.3vw;
+  line-height: 1;
+}
+
+.card-text {
+  font-size: 1.5vw;
+}
+
+#celcius-converter,
+#fahrenheit-converter {
+  text-decoration: none;
+  color: inherit;
+}
+
+#search-form {
+  display: inline;
+}
+
+#search-button,
+#location-button {
+  border: grey 1px solid;
+  border-radius: 1px;
+}
