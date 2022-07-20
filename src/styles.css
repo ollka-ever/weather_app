@@ -46,12 +46,6 @@ footer {
   text-align: right;
 }
 
-.main-icon {
-  width: 12vw;
-  display: block;
-  margin: 0 auto;
-}
-
 .main-info {
   text-align: right;
   font-size: 1.2vw;
@@ -70,6 +64,21 @@ footer {
   font-size: 1.5vw;
 }
 
+footer .github {
+  background-color: #fff;
+  padding-bottom: 5px;
+}
+
+footer .github a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer .github a:hover {
+  background-color: #b7e9f7;
+  font-size: small;
+}
+
 #celcius-converter,
 #fahrenheit-converter {
   text-decoration: none;
@@ -84,4 +93,10 @@ footer {
 #location-button {
   border: grey 1px solid;
   border-radius: 1px;
+}
+
+#main-icon {
+  width: 12vw;
+  display: block;
+  margin: 0 auto;
 }

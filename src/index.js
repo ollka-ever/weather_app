@@ -8,7 +8,7 @@ function showDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let weekDay = daysOfWeek[date.getDay()];
   let hour = date.getHours();
@@ -67,6 +67,32 @@ function convertToFahrenheit() {
   }
 }
 
+//changes weather icon according to weather description
+function setIcon(weather) {
+  weather = weather.toLowerCase();
+  if (weather === "clouds" || weather === "smoke" || weather === "fog") {
+    return "images/cloud.png";
+  } else if (weather === "haze") {
+    return "images/cloudy.png";
+  } else if (
+    weather === "dust" ||
+    weather === "sand" ||
+    weather === "ash" ||
+    weather === "squall" ||
+    weather === "tornado"
+  ) {
+    return "images/images/windy.png";
+  } else if (weather === "drizzle" || weather === "rain") {
+    return "images/rainy.png";
+  } else if (weather === "thunderstorm") {
+    return "images/storm.png";
+  } else if (weather === "snow") {
+    return "images/snowy.png";
+  } else if (weather === "clear") {
+    return "images/sun.png";
+  }
+}
+
 //updates in h1 city and main temp for it
 function updateWeather(response) {
   convertToCelcius();
@@ -84,6 +110,9 @@ function updateWeather(response) {
   descriptionHeader.innerHTML = description;
   windHeader.innerHTML = wind;
   humidityHeader.innerHTML = response.data.main.humidity;
+  document.getElementById("main-icon").src = setIcon(
+    response.data.weather[0].main
+  );
 }
 
 //gets info about weather by API with city
