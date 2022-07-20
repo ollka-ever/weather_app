@@ -115,6 +115,12 @@ function updateWeather(response) {
   );
 }
 
+//get info about default Kyiv weather
+function showDefaultWeather(city) {
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=616b6d14eb70524f242eb75242106f0a&units=metric`;
+  axios.get(url).then(updateWeather);
+}
+
 //gets info about weather by API with city
 function searchCity(event) {
   event.preventDefault();
@@ -162,3 +168,6 @@ searchButton.addEventListener("submit", searchCity);
 
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", invokeLocation);
+
+//show default weather
+showDefaultWeather("Kyiv");
